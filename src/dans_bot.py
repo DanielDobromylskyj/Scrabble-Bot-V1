@@ -41,6 +41,11 @@ class MyBot(Api):
         self.dictionary_buckets = {}
         self.first_turn = True
 
+        self.hand_equal = False
+        self.last_hand = []
+
+        self.unstuck_counter = 0
+
     def _init(self):
         self.dictionary_buckets = create_bucketed_dictionary(self.get_dictionary().words)
 
@@ -102,5 +107,19 @@ class MyBot(Api):
                     if self.check_placement(playable, False, x + dx, y + dy):
                         self.place_word(playable, False, x + dx, y + dy)
 
+        if self.last_hand == hand:
+            self.hand_equal = True
+            self.unstuck_counter = 3
+
+        if self.hand_equal:
+            self.unstuck_counter -= 1
+
+            if self.unstuck_counter == 0:
+                self.hand_equal = False
+
+            else:
+                self.pass_turn()
+
         # No Moves? No Problem!
         self.discard_letters(hand)
+
